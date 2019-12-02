@@ -67,6 +67,7 @@ std::string PageReplacement::printResults(int alg)
             << std::setw(14) << algorithm
             << std::setw(14) << numPageFaults;
 
+   /*
    if (pageFaultList.size() > 5)
    {
       i = pageFaultList.size() - 4;
@@ -76,6 +77,7 @@ std::string PageReplacement::printResults(int alg)
       output << pageFaultList.getNode(i - 1)->faultRate << " ";
       i++;
    }
+    */
    output << std::endl;
    return output.str();
 }

@@ -2,7 +2,7 @@
 #all .cpp and .h files
 #at the command prompt
 #make
-#./Lab3  (or whatever you call the TARGET)
+#./page_replacement  (or whatever you call the TARGET)
 
 #for use with c++ files
 .SUFFIXES : .cpp
@@ -17,7 +17,7 @@ CXXFLAGS = -g -std=c++11
 OBJS =  main.o List.o PageReplacement.o  
 
 ######Change from matrix to hw1.#######
-TARGET = Lab3
+TARGET = page_replacement
 
 ######Do NOT change this...Tabs Matter!#########
 $(TARGET): $(OBJS)

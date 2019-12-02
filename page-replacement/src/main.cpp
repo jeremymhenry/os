@@ -9,8 +9,8 @@ int main(int argc, const char * argv[])
 
    // read in command line arguments - frame size, input and output files
    int numFrames = atoi(argv[1]);
-   inputFileName = argv[2];
-   outputFileName = argv[3];
+   inputFileName = "pages.txt";
+   outputFileName = "outfile.txt";
 
    std::ifstream inFile;
    inFile.open(inputFileName);
@@ -47,10 +47,10 @@ int main(int argc, const char * argv[])
    outFile.open(outputFileName, std::ofstream::out | std::ofstream::app);
 
    outFile << "==============================================================\n"
-           << "  Page Replacement Algorithm Simulation (frame size = " << numFrames << ")\n"
+           << "            Page Replacement Algorithm Simulation             \n"
            << "==============================================================\n"
-           << "                                    Page fault ratio          \n"
-           << "  Algorithm Total page faults 2000  4000  6000  8000  10000   \n"
+           << "                                                              \n"
+           << "  Algorithm Total page faults  -   Frame Size: " << numFrames << " \n"
            << "--------------------------------------------------------------\n";
 
    pageReplacement.setNumFrames(numFrames);
@@ -61,8 +61,8 @@ int main(int argc, const char * argv[])
    outFile << pageReplacement.printResults(1);
    pageReplacement.LRU(list);
    outFile << pageReplacement.printResults(2);
-   pageReplacement.MFU(list);
-   outFile << pageReplacement.printResults(3);
+   //pageReplacement.MFU(list);
+   //outFile << pageReplacement.printResults(3);
    pageReplacement.OPTIMAL(list);
    outFile << pageReplacement.printResults(4);
 
